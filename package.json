@@ -1,5 +1,5 @@
 {
-  "name": "taggart_capstone",
+  "name": "christiantaggart",
   "version": "1.33.7",
     "scripts": {
       "start": "ASPNETCORE_ENVIRONMENT=Development dotnet run"
