@@ -40,3 +40,40 @@ To deploy your application to production, you can use the publish feature which 
 dotnet publish -c Release
 ```
 "This will produce a ready-to-deploy production build of your application. It includes .NET code compiled in Release mode, and invokes Webpack with the --env.prod flag to produce a production build of front-end assets. Equivalently, you can use the Publish option from Visual Studio’s Build menu."
+
+--- 
+
+### NOTES FROM Rhys Goehring 
+"oh thats right it’s a .net server, the configs will prob be different. this guy has a folder called .ebextensions with a file called nodecommand.config:"
+
+```option_settings:
+  aws:elasticbeanstalk:container:nodejs:
+    NodeCommand: "npm start"
+```
+"and another folder called .elasticbeanstalk with a config.yml:"
+```branch-defaults:
+  master:
+    environment: bookShopU
+global:
+  application_name: booksShop_Universal
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Node.js
+  default_region: eu-west-1
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: git
+  workspace_type: Application
+```
+
+### DEPLOY THE APP IN AWS ELASTIC BEANSTALK
+1. Register an account in aws.amazon.com
+2. install Elastic Beanstalk CLI following the instruction in: http://docs.aws.amazon.com/ elasticbeanstalk/latest/dg/eb-cli3-install.html
+3. If you don't have a user, create one in IAM following the instruction in the lecture
+4. In the App project folder, create a new directory called: .ebextensions and inside it, create a new file: nodecommand.config with the below
+5. Initialize an Elastic Beanstalk repository in your project folder by running in Terminal the command: ed init and choose the country that will host your created environment and answer to the rest of questions. The first time you create an environment from a computer you will be asked for the aws-access-id and the secrete-access-key you get when you create a new user in AWS
+
+"Rhys: although he’s using mongodb which is deployed online elsewhere"
