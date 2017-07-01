@@ -35,7 +35,7 @@ mkdir x86_64
   ![](https://raw.githubusercontent.com/christiantaggart/taggart_capstone/master/NOTES/images/tutorial/buildsettingsdropdown.png)
 
 * Click build
-![](../images/macosxbuildsettings.png)
+![](https://github.com/christiantaggart/taggart_capstone/blob/master/NOTES/images/tutorial/macosxbuildsettings.png)
 
 * Choose Directory **PROJECTFOLDER/builds/mac/x86_64**
  - This will create your Unity Mac standalone application
