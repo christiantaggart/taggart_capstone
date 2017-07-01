@@ -32,7 +32,7 @@ mkdir x86_64
 
 * Inside Unity go to build settings:
   `Shift CMD B` _or_ via toolbar: File ➡️ Build Settings
-  ![](../images/buildsettingsdropdown.png)
+  ![](https://raw.githubusercontent.com/christiantaggart/taggart_capstone/master/NOTES/images/tutorial/buildsettingsdropdown.png)
 
 * Click build
 ![](../images/macosxbuildsettings.png)
